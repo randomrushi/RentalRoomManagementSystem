@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block body %}
+        <div id="main" class="p-0">
+            <section class="d-flex flex-column justify-content-center align-items-center intro flex-wrap bg-primary1">
+                <div class="text-center">
+                    <h1>ROOM RENTAL MANAGEMENT SYSTEM</h1>
+                    <P>Easiest Way to rent a Home</P>
+                </div>
+                <div>
+                    <a id="btn-to-search-home"><button class="btn btn-unique btn-rounded btn-sm my-0 waves-effect bg-dark1 text-light">FIND HOUSE HERE</button></a>
+                </div>
+            </section>
+            <section class="d-flex flex-column justify-content-center align-items-center intro flex-wrap bg-primary1" id="search-home">
+                <h1 class="font-weight-bold"></h1>
+                <div class="row">
+                    <div class="col-sm text-center">
+                        <form class="form-inline md-form mr-auto p-3">
+                            <input class="form-control mr-sm-2 text-dark1" type="text" placeholder="Enter Location" aria-label="Search">
+                            <button class="btn btn-unique btn-rounded btn-sm my-0 waves-effect waves-light text-dark1" type="submit" name="submit"">Search</button>
+                        </form>
+                        <button class="btn btn-unique btn-rounded btn-sm my-0 waves-effect bg-light1 text-center align-content-center p-3"><p class="text-primary1">Do you own property? <u>List it here</u></p></button>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-light1 ignore-css text-dark1">
+                <div class="card-deck d-flex flex-row p-5 flex-wrap m-0">
+                    {% if props %}
+                    {% for i in props %}
+                    <!-- Card -->
+                    <div class="card mb-4 column">
+                      <!--Card image-->
+                      <div class="view overlay">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+                          alt="Card image cap">
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                          content.</p>
+                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                      </div>
+                    </div>
+                    <!-- Card -->
+                    <!-- Card -->
+                    <div class="card mb-4 column">
+                      <!--Card image-->
+                      <div class="view overlay">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+                          alt="Card image cap">
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                          content.</p>
+                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                      </div>
+                    </div>
+                    <!-- Card -->
+                    <!-- Card -->
+                    <div class="card mb-4 column">
+                      <!--Card image-->
+                      <div class="view overlay">
+                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+                          alt="Card image cap">
+                        <a href="#!">
+                          <div class="mask rgba-white-slight"></div>
+                        </a>
+                      </div>
+                      <!--Card content-->
+                      <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                          content.</p>
+                        <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                        <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+                      </div>
+                    </div>
+                    <!-- Card -->
+                    {% endfor %}
+                    {% else %}
+                    <h2>...No Vendors To Show...</h2>
+                    {% endif %}
+                  </div>
+                  <!-- Card deck -->
+            </section>
+        </div>
+        {% endblock %}

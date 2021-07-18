@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "css/main.css" %}'>
+</head>
+    <body>    
+        <nav class="navbar bg-dark1">
+            <a href="index.html" class="navbar-brand">HomeRental</a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="{% url 'home' %}">Explore</a>
+                <a href="{% url 'aboutus' %}">About</a>
+                <a href="{% url 'owner' %}">For House Owner</a>
+                <a href="{% url 'tenant' %}">For Tenant</a>
+                <div class="d-flex flex-row justify-content-center m-5 p-5">
+                    <div id="login"><button onclick="location.href = '{% url 'login' %}';" class="btn btn-unique btn-rounded btn-sm my-0 waves-effect waves-light text-dark1">Login</button></div>
+                    <div hidden id="logout"><button class="btn btn-unique btn-rounded btn-sm my-0 waves-effect waves-light text-dark1">Logout</button></div>
+                </div>
+            </div>
+            <a>
+                <span class="menu-btn" onclick="openNav()">
+                    <div class="bg-light1"></div>
+                    <div class="bg-light1"></div>
+                    <div class="bg-light1"></div>
+                </span>
+            </a>
+        </nav>
+    {% block body %}
+
+    {% endblock %}
+               <footer class="page-footer font-small blue pt-4 bg-secondary1 text-light">
+                <div class="container-fluid text-center text-md-left">          
+                    <div class="row">
+                        <div class="col-md-6 mt-md-0 mt-3">
+                            <h5 class="text-uppercase font-weight-bold">ROOM RENTAL MANAGEMENT SYSTEM</h5>
+                            <p>"Rental Room Management System" attempting to provide better rental solutions via design & technology.</p>
+                            <p>We help find, book rental homes of choice across Indian cities. Whatever be your budget, whatever you may call a home (a bed, a room or an entire house), we have something for you!</p>
+                        </div>
+                        <hr class="clearfix w-100 d-md-none pb-3">
+                        <div class="col-md-3 mb-md-0 mb-3">
+                            <h5 class="text-uppercase font-weight-bold">ROOM RENTAL MANAGEMENT SYSTEM</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="{% url 'aboutus' %}" style="text-decoration: none;">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="text-decoration: none;">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 mb-md-0 mb-3">
+                            <h5 class="text-uppercase font-weight-bold">FOR OWNERS & TENANTS</h5>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="{% url 'owner' %}" style="text-decoration: none;">List your property</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'tenant' %}" style="text-decoration: none;">Search house for rent</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                    <a href="#">Room Rental Mangement System</a>
+                </div>
+            </footer>
+        </div>
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>

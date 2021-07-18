@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block body %}
+        <div id="main" class="p-0">
+            <section class="ignore-css">
+                <div class="container">
+                    <div id="content" class="content p-0">
+                        <div class="profile-header">
+                            <div class="profile-header-cover"></div>
+                                <div class="profile-header-content">
+                                    <div class="profile-header-img">
+                                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="" />
+                                    </div>
+                                    <div class="profile-header-info">
+                                        <h4 class="m-t-sm">Full Name</h4>
+                                        <a href="profile_tenant.html" class="btn btn-xs btn-primary mb-3">Edit Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="profile-container">
+                                <div class="row row-space-20">
+                                    <div class="col-md-8">
+                                        <div class="tab-content p-0">
+                                            <div class="tab-pane active show" id="profile-about">
+                                                <table class="table table-profile">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">BASIC INFORMATION</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="field">Age</td>
+                                                            <td class="value">18+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="field">Gender</td>
+                                                            <td class="value">Male</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="field">Marital Status</td>
+                                                            <td class="value">Unmarried</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <table class="table table-profile">
+                                                    <thead>
+                                                        <tr>
+                                                            <th colspan="2">CONTACT INFORMATION</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="field">Mobile Phones</td>
+                                                            <td class="value">+91 99999 99999</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="field">Email</td>
+                                                            <td class="value">admin@infinite.com</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="field">Address(Hometown)</td>
+                                                            <td class="value">Address Line 1<br>Address Line 2<br>City <br>Taluka <br>District <br>State <br>Zip Code</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="field">Address(Work)</td>
+                                                            <td class="value">Address Line 1<br>Address Line 2<br>City <br>Taluka <br>District <br>State <br>Zip Code</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<div>
+{% endblock %}

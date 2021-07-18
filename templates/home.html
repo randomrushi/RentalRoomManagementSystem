@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock %}
+
+{% block body %}
+<!-- Card deck -->
+<div class="card-deck" style="padding:5%;">
+
+  {% if props %}
+      {% for i in props %}
+
+  <!-- Card -->
+  <div class="card mb-4">
+
+    <!--Card image-->
+    <div class="view overlay">
+      <img class="card-img-top" style="hight:240px;width:360px;" src="/media/{{i.image}}"
+        alt="Card image cap">
+      <a href="#!">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+
+    <!--Card content-->
+    <div class="card-body">
+
+      <!--Title-->
+      <h4 class="card-title">Starting form {{i.rent_amount}} Only</h4>
+      <!--Text-->
+      <p class="card-text">on {{i.type}} Basis . {{i.number_of_props}} available.</p>
+        <p class="card-text">in {{i.city}}</p>
+          <p class="card-text">Landmark{{i.landmark}}</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      <button type="button" class="btn btn-light-blue btn-md">Know more</button>
+
+    </div>
+
+  </div>
+  <!-- Card -->
+
+  {% endfor %}
+{% else %}
+<h2>...No Vendors To Show...</h2>
+{% endif %}
+
+</div>
+<!-- Card deck -->
+
+{% endblock %}
